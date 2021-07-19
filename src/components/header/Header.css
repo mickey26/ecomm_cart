@@ -1,0 +1,47 @@
+.headerContainer {
+    background-color: black;
+    color: white;
+    /* height: 60px; */
+    display: flex;
+    align-items: center;
+    /* padding: 0px 10px 0px 10px; */
+    justify-content:space-between;
+}
+
+.navLinkContainer{
+    display: flex;
+    cursor: pointer;    
+    align-items: center;
+}
+.navLinkMobileView{
+    display: flex;
+    align-items: center;
+}
+
+.navbarLastContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.catagoryDropdownContainer{
+    display: flex;
+    align-items: flex-end;
+}
+.dropdownContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: black;
+    border: 1px solid red;
+}
+
+.navbarLastIconcontainer{
+    padding: 0px 20px 0px 10px;
+}
+
+p {
+    padding: 10px;
+    display: flex;
+    align-content: center;
+}
+
