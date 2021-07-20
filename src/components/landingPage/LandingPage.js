@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Skeleton from "react-loading-skeleton";
 import { connect } from "react-redux";
 import { getProductData, addDataToCart } from "../../actions/landingActions";
 import Cards from "../card/Cards";
@@ -23,7 +24,10 @@ class LandingPage extends Component {
     
     return (
       <div className="mainContainer">
-        {this.props.isLoading ? <div className = "loadingScreen">I am Loading</div>:
+        {this.props.isLoading ?
+        <div>
+          <Skeleton count = {40} height = {200} width = {200} />
+        </div>:
         this.props.productData.map((data) => (
           <Cards
             product={data}
