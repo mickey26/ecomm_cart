@@ -1,7 +1,7 @@
 const INIITIAL_STATE = {
   productData: [],
   cartData: [],
-  count: 0,
+  isLoading:true,
   
 };
 export default function LandingReducers(state = INIITIAL_STATE, action) {
@@ -10,6 +10,7 @@ export default function LandingReducers(state = INIITIAL_STATE, action) {
       return {
         ...state,
         productData: action.payload,
+        isLoading:false,
       };
     case "addDataToCart":
       return {

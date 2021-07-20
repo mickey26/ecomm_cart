@@ -20,24 +20,28 @@ class LandingPage extends Component {
   }
 
   render() {
+    
     return (
       <div className="mainContainer">
-        {this.props.productData.map((data) => (
+        {this.props.isLoading ? <div className = "loadingScreen">I am Loading</div>:
+        this.props.productData.map((data) => (
           <Cards
             product={data}
             addDataInCart={() => this.addDataInCart(data)}
           />
         ))}
+        
       </div>
     );
   }
 }
 
 const mapStateTOProps = ({ LandingReducers }) => {
-  const { productData, count } = LandingReducers;
+  const { productData, count, isLoading } = LandingReducers;
   return {
     productData,
     count,
+    isLoading,
   };
 };
 

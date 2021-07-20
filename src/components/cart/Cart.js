@@ -21,6 +21,7 @@ const Cart = (props) => {
       payload: { tempList, productTempList },
     });
   };
+  
   return (
     <div className="cartContainer">
       <h2>My Cart </h2>
