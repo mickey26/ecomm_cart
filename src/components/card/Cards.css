@@ -3,9 +3,17 @@
     flex-direction: column;
     width: 180px;
     padding: 10px;
-    margin: 5px;
-    border: 0.5px solid black;
-    box-shadow: 2px 2px 2px 2px black;
+    margin: 20px;
+    background-color: #fff;
+    /* border: 0.5px solid black; */
+    
+}
+
+.cardContainer:hover{
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+    /* z-index: -1; */
 }
 .imageContainer{
     display: flex;
