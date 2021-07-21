@@ -1,6 +1,7 @@
 import axios from "axios";
 const GET_PRODUCT_URL = "https://fakestoreapi.com/products";
 
+
 export const getProductData = () => {
   return (dispatch) => {
     axios.get(GET_PRODUCT_URL).then((res) => {
@@ -16,6 +17,8 @@ export const getProductData = () => {
     });
   };
 };
+
+
 
 export const addDataToCart = (productList, cardData) => {
   return (dispatch) => {

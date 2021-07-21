@@ -1,15 +1,18 @@
 const INIITIAL_STATE = {
   productData: [],
+  filterFor:[],
   cartData: [],
   isLoading:true,
   
 };
 export default function LandingReducers(state = INIITIAL_STATE, action) {
+  console.log(action.payload,"payload");
   switch (action.type) {
     case "productData":
       return {
         ...state,
         productData: action.payload,
+        filterFor:action.payload,
         isLoading:false,
       };
     case "addDataToCart":
@@ -36,6 +39,16 @@ export default function LandingReducers(state = INIITIAL_STATE, action) {
         cartData: [...action.payload.tempList],
         productData:[...action.payload.productTempList],
       };
+    case "FILTERED_DATA":
+      return{
+        ...state,
+        productData:[...action.payload]
+      }
+    case "ALLDATA":
+      return{
+        ...state,
+        productData:[...action.payload]
+      }
     default:
       return state;
   }

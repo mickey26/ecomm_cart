@@ -11,7 +11,8 @@ function Bill() {
     cartState.map((data) => {
       amount = amount + data.count * data.price;
     });
-    setPrice(amount);
+    let shortAmount = amount.toFixed(3);
+    setPrice(shortAmount);
   }, [cartState]);
   return (
     <div className = "billDivContainer">
