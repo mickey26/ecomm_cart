@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ThemeProvider } from "styled-components";
 
 function Counter(props) {
   const [counterValue, setCounterValue] = useState(1);
@@ -40,9 +39,7 @@ function Counter(props) {
       <button onClick={() => handleCountById(props, props.productId.id)}>
         +
       </button>
-      {'                   '}
       {props.productId.count}
-      {'                   '}
       <button
         onClick={() => handleCountDecrement(props, props.productId.count)}
       >
