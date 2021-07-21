@@ -6,7 +6,6 @@ const INIITIAL_STATE = {
   
 };
 export default function LandingReducers(state = INIITIAL_STATE, action) {
-  console.log(action.payload,"payload");
   switch (action.type) {
     case "productData":
       return {

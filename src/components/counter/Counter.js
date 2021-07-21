@@ -39,7 +39,9 @@ function Counter(props) {
       <button onClick={() => handleCountById(props, props.productId.id)}>
         +
       </button>
+      {"   "}
       {props.productId.count}
+      {"   "}
       <button
         onClick={() => handleCountDecrement(props, props.productId.count)}
       >

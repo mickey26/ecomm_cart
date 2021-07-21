@@ -1,18 +1,19 @@
-.cartContainer{
-    min-width: 300px;
-     display: flex;
-    flex-direction: column;
-     align-items: center; 
-     padding:20px; 
-     height: 90vh;
-     overflow-x: hidden;
-     overflow-y: auto;
+.cartContainer {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 60px;
 }
-.cartCardContainer{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    border: 1px solid black;
-    padding: 5px;
+.cartCardContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid black;
+  padding: 5px;
 }

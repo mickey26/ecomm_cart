@@ -1,8 +1,15 @@
 .checkCategory{
+    margin-top: 3px;
     display: flex;
     flex-direction: row;
+    padding: 7px;
+}
+.filterBarContainer{
+    width: 150px;
+    position: fixed;
 }
 
-.filterBarContainer{
-
+.filterHeading{
+    padding: 8px;
+    border-bottom: solid 0.5px black;
 }
