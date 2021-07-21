@@ -2,24 +2,22 @@
     display: flex;
     flex-direction: column;
     width: 180px;
-    padding: 10px;
-    margin: 20px;
+    height: 250px;
+    padding: 30px 10px 10px 20px;
+    margin: 15px;
     background-color: #fff;
-    /* border: 0.5px solid black; */
-    
 }
 
 .cardContainer:hover{
     box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.08);
     transition: 0.3s;
     cursor: pointer;
-    /* z-index: -1; */
 }
 .imageContainer{
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 4px;
+    padding: 6px;
 }
 
 .detailContainer{
@@ -39,5 +37,4 @@
     padding-top: 6px;
     display: flex;
     justify-content: space-evenly;
-   
 }

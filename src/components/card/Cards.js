@@ -9,15 +9,15 @@ class Cards extends Component {
         <div className="imageContainer">
           <img
             src={this.props.product.image}
-            height="150px"
-            width="150px"
+            height="140px"
+            width="155px"
             alt="image_product"
           />
         </div>
         <div className="detailContainer">
           <div className="titleContainer">
             {" "}
-            <h5>{this.props.product.title}</h5>
+            <p>{this.props.product.title}</p>
           </div>
 
           <h4 style={{ color: "red" }}>Price: {this.props.product.price}</h4>

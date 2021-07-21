@@ -31,7 +31,6 @@ function FilterBar() {
     if (filteredData.length !== 0) {
       dispatch({ type: "FILTERED_DATA", payload: filteredData });
     } else if (filteredData.length === 0) {
-      console.log(allProductList, "allProductlist");
       dispatch({ type: "FILTERED_DATA", payload: allProductList });
     }
   }, [filteredData]);
@@ -49,7 +48,6 @@ function FilterBar() {
     } else if (status === false) {
       removeDataFromList(cat);
     }
-    console.log("barbar");
   };
 
   const fetchDataByCatagory = (cat) => {
@@ -62,22 +60,21 @@ function FilterBar() {
           showCounter: false,
         }));
         setFilteredData([...filteredData, ...list]);
-        console.log("barbar1");
       }
     });
   };
 
   const removeDataFromList = (cat) => {
-    console.log(cat, "fop");
     let filList = filteredData;
     filList = filteredData.filter((data) => data.category !== cat.item);
-    console.log(filList, "fillist");
     setFilteredData(filList);
   };
 
-  console.log(filteredData, "popo");
   return (
     <div className="filterBarContainer">
+      <div className="filterHeading">
+        <h5> Category Filter</h5>
+      </div>
       {categoryList &&
         categoryList.map((category) => (
           <div className="checkCategory">
@@ -86,7 +83,8 @@ function FilterBar() {
             ) : (
               <BiSquareRounded onClick={() => handleUncheck(category, true)} />
             )}
-            <h3>{category.item}</h3>
+            &nbsp;
+            <h5>{category.item}</h5>
           </div>
         ))}
     </div>

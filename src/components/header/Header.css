@@ -1,0 +1,15 @@
+.headerContainer {
+  height: 50px;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; 
+}
+
+.navLinkContainer {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
