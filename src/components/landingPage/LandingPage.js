@@ -3,6 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import { connect } from "react-redux";
 import { getProductData, addDataToCart } from "../../actions/landingActions";
 import Cards from "../card/Cards";
+import Cart from "../cart/Cart";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
@@ -21,20 +22,20 @@ class LandingPage extends Component {
   }
 
   render() {
-    
     return (
       <div className="mainContainer">
-        {this.props.isLoading ?
-        <div>
-          <Skeleton count = {40} height = {200} width = {200} />
-        </div>:
-        this.props.productData.map((data) => (
-          <Cards
-            product={data}
-            addDataInCart={() => this.addDataInCart(data)}
-          />
-        ))}
-        
+        {this.props.isLoading ? (
+          <div>
+            <Skeleton count={40} height={200} width={200} />
+          </div>
+        ) : (
+          this.props.productData.map((data) => (
+            <Cards
+              product={data}
+              addDataInCart={() => this.addDataInCart(data)}
+            />
+          ))
+        )}
       </div>
     );
   }
