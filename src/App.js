@@ -7,15 +7,20 @@ import MainWrapper from "./components/MainWrapper";
 function App() {
   return (
     <MainWrapper>
-      <div className="App">
-        <div className="filterAndResultContainer">
-          <div className="filterBar">
+      {/* <div className="App">
+        <div className="filterAndResultContainer"> */}
+      {/* <div className="filterBar">
             <FilterBar />
-          </div>
-          <LandingPage />
-        </div>
-        <Cart />
+          </div> */}
+      <div className="landingCartContainer">
+        {/* <FilterBar /> */}
+        <LandingPage />
+        <Cart />{" "}
       </div>
+
+      {/* </div> */}
+      {/* <Cart /> */}
+      {/* </div> */}
     </MainWrapper>
   );
 }

@@ -1,11 +1,19 @@
+
+
+
+
+
+
 .cardContainer {
     display: flex;
-    flex-direction: column;
-    width: 180px;
-    height: 250px;
-    padding: 30px 10px 10px 20px;
-    margin: 15px;
+    justify-content: space-between;
+    width: 330px;
+    /* height: 150px; */
+    padding: 5px;
+    margin: 10px;
+    /* margin: 15px; */
     background-color: #fff;
+    border-bottom: 0.3px solid rgba(83, 81, 81, 0.096);
 }
 
 .cardContainer:hover{
@@ -15,26 +23,23 @@
 }
 .imageContainer{
     display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 6px;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 8px;
 }
 
 .detailContainer{
     display: flex;
+    justify-content:space-between;
     flex-direction: column;
     padding: 4px;
 }
 
-.titleContainer{
-    width: 160px;
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-overflow: clip;
-}
-
 .buttonContainer{
     padding-top: 6px;
-    display: flex;
-    justify-content: space-evenly;
+    margin: 0px 0px 10px 0px;
+}
+
+p{
+    padding: 7px;
 }

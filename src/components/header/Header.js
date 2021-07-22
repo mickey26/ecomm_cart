@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Header.css";
+import {VscAccount} from "react-icons/vsc";
 class Header extends Component {
   render() {
     return (
       <div className="headerContainer">
-        <div className="navLinkContainer">
           <img
             style={{
               height: "90px",
@@ -12,7 +12,7 @@ class Header extends Component {
             src="https://www.logo.wine/a/logo/Snapdeal/Snapdeal-Logo.wine.svg"
             alt="logo"
           />
-        </div>
+          <VscAccount size = {35} color = "white"/>
       </div>
     );
   }

@@ -26,12 +26,13 @@ const Cart = (props) => {
 
   return (
     <div className="cartContainer">
+      <h2>My Cart </h2>
       {loadingState ? (
         <Skeleton count={1} height={800} width={400} />
       ) : (
         <div >
-          <h2>My Cart </h2>
-          <Bill />
+          
+          {/* <Bill /> */}
           {states &&
             states.map((data) => (
               <div className="cartCardContainer">
