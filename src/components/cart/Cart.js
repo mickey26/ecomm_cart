@@ -30,8 +30,7 @@ const Cart = (props) => {
       {loadingState ? (
         <Skeleton count={1} height={800} width={400} />
       ) : (
-        <div >
-          
+        <div>
           {/* <Bill /> */}
           {states &&
             states.map((data) => (
@@ -39,9 +38,9 @@ const Cart = (props) => {
                 <h5>{data.title}</h5>
                 <h5>Quantity:{data.count}</h5>
                 <h4>Item price = {data.count * data.price}</h4>
-                <button onClick={() => handleRemoveFromCart(data.id)}>
-                  Remove from cart
-                </button>
+                <div className = "buttonContainerCart" onClick={() => handleRemoveFromCart(data.id)}>
+                  Remove Item
+                </div>
               </div>
             ))}
         </div>
