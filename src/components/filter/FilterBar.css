@@ -5,7 +5,9 @@
     padding: 7px;
 }
 .filterBarContainer{
-    width: 150px;
+    /* width: 150px; */
+    display: flex;
+    flex-direction: column;
     position: fixed;
 }
 

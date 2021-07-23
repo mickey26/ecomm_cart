@@ -6,22 +6,15 @@ import FilterBar from "./components/filter/FilterBar";
 import MainWrapper from "./components/MainWrapper";
 function App() {
   return (
-    <MainWrapper>
-      {/* <div className="App">
-        <div className="filterAndResultContainer"> */}
-      {/* <div className="filterBar">
-            <FilterBar />
-          </div> */}
-      <div className="landingCartContainer">
-        {/* <FilterBar /> */}
+    // <div className="App">
+      <MainWrapper>
+        <div style={{marginTop: "50px",display: "flex",flexDirection: "row",justifyContent:'space-between'}}>
+        <FilterBar />
         <LandingPage />
-        <Cart />{" "}
-      </div>
-
-      {/* </div> */}
-      {/* <Cart /> */}
-      {/* </div> */}
-    </MainWrapper>
+        <Cart />
+        </div>
+      </MainWrapper>
+    // </div>
   );
 }
 
