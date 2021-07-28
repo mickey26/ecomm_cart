@@ -1,17 +1,10 @@
 
-
-
-
-
-
 .cardContainer {
     display: flex;
     justify-content: space-between;
     width: 330px;
-    /* height: 150px; */
     padding: 5px;
     margin: 10px;
-    /* margin: 15px; */
     background-color: #fff;
     border-bottom: 0.3px solid rgba(83, 81, 81, 0.096);
 }

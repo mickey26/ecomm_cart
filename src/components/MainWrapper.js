@@ -4,10 +4,9 @@ import Header from "./header/Header";
 export default class MainWrapper extends Component {
   render() {
     return (
-      <div style = {{display:"flex"}}>
+      <div style = {{display:'flex'}}>
         <Header />
-        <div style = {{width:'100vw'}} >{this.props.children}</div>
-        
+        {this.props.children}
       </div>
     );
   }

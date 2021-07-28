@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function Counter(props) {
-  const [counterValue, setCounterValue] = useState(1);
   const counterState = useSelector((data) => data.LandingReducers.productData);
   const cartState = useSelector((data) => data.LandingReducers.cartData);
   const dispatch = useDispatch();

@@ -4,17 +4,16 @@ import LandingPage from "../src/components/landingPage/LandingPage";
 import Cart from "../src/components/cart/Cart";
 import FilterBar from "./components/filter/FilterBar";
 import MainWrapper from "./components/MainWrapper";
+import { useSelector } from "react-redux";
+
 function App() {
+  const isCartOpen = useSelector(data =>data.LandingReducers.isCartOpen);
   return (
-    // <div className="App">
       <MainWrapper>
-        <div style={{marginTop: "50px",display: "flex",flexDirection: "row",justifyContent:'space-between'}}>
         <FilterBar />
         <LandingPage />
-        <Cart />
-        </div>
+        {isCartOpen ? <Cart/> :null}
       </MainWrapper>
-    // </div>
   );
 }
 

@@ -3,6 +3,7 @@ const INIITIAL_STATE = {
   filterFor:[],
   cartData: [],
   isLoading:true,
+  isCartOpen:false,
   
 };
 export default function LandingReducers(state = INIITIAL_STATE, action) {
@@ -47,6 +48,11 @@ export default function LandingReducers(state = INIITIAL_STATE, action) {
       return{
         ...state,
         productData:[...action.payload]
+      }
+    case "cartModel":
+      return {
+        ...state,
+        isCartOpen:action.payload
       }
     default:
       return state;

@@ -3,7 +3,6 @@ import Skeleton from "react-loading-skeleton";
 import { connect } from "react-redux";
 import { getProductData, addDataToCart } from "../../actions/landingActions";
 import Cards from "../card/Cards";
-import Cart from "../cart/Cart";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
@@ -29,8 +28,8 @@ class LandingPage extends Component {
             <Skeleton count={40} height={200} width={200} />
           </div>
         ) : (
-          this.props.productData.map((data) => (
-            <Cards
+          this.props.productData.map((data,index) => (
+            <Cards key = {index}
               product={data}
               addDataInCart={() => this.addDataInCart(data)}
             />
