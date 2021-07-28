@@ -76,8 +76,8 @@ function FilterBar() {
         <h5> Category Filter</h5>
       </div>
       {categoryList &&
-        categoryList.map((category) => (
-          <div className="checkCategory">
+        categoryList.map((category,index) => (
+          <div className="checkCategory" key = {index}>
             {category.isChecked ? (
               <FiCheckSquare onClick={() => handleUncheck(category, false)} />
             ) : (
@@ -87,6 +87,7 @@ function FilterBar() {
             <h5>{category.item}</h5>
           </div>
         ))}
+      
     </div>
   );
 }

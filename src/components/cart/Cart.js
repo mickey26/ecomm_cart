@@ -2,12 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Cart.css";
 import Bill from "../bill/Bill";
-import Skeleton from "react-loading-skeleton";
+import { GrClose } from 'react-icons/gr';
 
 const Cart = (props) => {
   const states = useSelector((state) => state.LandingReducers.cartData);
   const productState = useSelector((data) => data.LandingReducers.productData);
-  const loadingState = useSelector((data) => data.LandingReducers.isLoading);
   const dispatch = useDispatch();
   const handleRemoveFromCart = (productId) => {
     let tempList = states;
@@ -24,27 +23,37 @@ const Cart = (props) => {
     });
   };
 
+  const closeCart = () =>{
+    dispatch({type:"cartModel",payload:false});
+  }
+
   return (
     <div className="cartContainer">
-      <h2>My Cart </h2>
-      {loadingState ? (
-        <Skeleton count={1} height={800} width={400} />
-      ) : (
-        <div>
-          {/* <Bill /> */}
-          {states &&
-            states.map((data) => (
-              <div className="cartCardContainer">
-                <h5>{data.title}</h5>
-                <h5>Quantity:{data.count}</h5>
-                <h4>Item price = {data.count * data.price}</h4>
-                <div className = "buttonContainerCart" onClick={() => handleRemoveFromCart(data.id)}>
-                  Remove Item
-                </div>
+      <div style={{
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: "space-between",
+        alignItems:'center'
+      }}>
+        <h2>My Cart </h2>
+        <GrClose onClick = {()=>closeCart()} />
+      </div>
+
+      <div>
+        <Bill />
+        {states &&
+          states.map((data,index) => (
+            <div className="cartCardContainer" key = {index}>
+              <h5>{data.title}</h5>
+              <h5>Quantity:{data.count}</h5>
+              <h4>Item price = {data.count * data.price}</h4>
+              <div className="buttonContainerCart" onClick={() => handleRemoveFromCart(data.id)}>
+                Remove Item
               </div>
-            ))}
-        </div>
-      )}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

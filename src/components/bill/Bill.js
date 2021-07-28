@@ -8,7 +8,7 @@ function Bill() {
 
   useEffect(() => {
     let amount = 0;
-    cartState.map((data) => {
+    cartState.map((data,index) => {
       amount = amount + data.count * data.price;
     });
     let shortAmount = amount.toFixed(3);
@@ -16,7 +16,7 @@ function Bill() {
   }, [cartState]);
   return (
     <div className = "billDivContainer">
-      <h3 style = {{color:"red"}}> Total Bill : {price} </h3>
+      <h3 style = {{color:"#e40046"}}> Total Bill : {price} </h3>
     </div>
   );
 }

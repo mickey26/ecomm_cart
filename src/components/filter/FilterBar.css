@@ -5,13 +5,17 @@
     padding: 7px;
 }
 .filterBarContainer{
-    /* width: 150px; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     position: fixed;
+    margin-top: 60px;
+    width: 100%;
+    border-bottom: 1px solid #e91e63;
+    background-color: #e40046;
+    overflow-x: auto;
+    height: 40px;
 }
-
 .filterHeading{
     padding: 8px;
-    border-bottom: solid 0.5px black;
 }
