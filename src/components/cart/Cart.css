@@ -1,5 +1,5 @@
 .cartContainer {
-  right:0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +7,12 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: fixed;
-  margin-top:99px ;
-  background-color:white ;
-  height: 81.5%;
-  border:2px solid black;
+  margin-top: 99px;
+  background-color: white;
+  height: 82.1%;
+  border: 1px solid black;
   min-width: 20%;
-
+  top: 0;
 }
 .cartCardContainer {
   margin-top: 10px;
@@ -24,15 +24,14 @@
   border-bottom: 0.3px solid rgba(83, 81, 81, 0.096);
 }
 
-.cartCardContainer:hover{
-  box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.08);
+.cartCardContainer:hover {
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
-  
 }
-.buttonContainerCart{
+.buttonContainerCart {
   padding: 6px 2px 4px 2px;
   align-self: center;
 }
-.buttonContainerCart:hover{
+.buttonContainerCart:hover {
   cursor: pointer;
 }

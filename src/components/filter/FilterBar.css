@@ -1,21 +1,22 @@
-.checkCategory{
-    margin-top: 3px;
-    display: flex;
-    flex-direction: row;
-    padding: 7px;
+.checkCategory {
+  margin-top: 3px;
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
 }
-.filterBarContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    margin-top: 60px;
-    width: 100%;
-    border-bottom: 1px solid #e91e63;
-    background-color: #e40046;
-    overflow-x: auto;
-    height: 40px;
+.filterBarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  margin-top: 60px;
+  width: 100%;
+  border-bottom: 1px solid #e91e63;
+  background-color: #e40046;
+  overflow-x: auto;
+  height: 40px;
+  top: 0;
 }
-.filterHeading{
-    padding: 8px;
+.filterHeading {
+  padding: 8px;
 }
